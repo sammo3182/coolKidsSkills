@@ -1,4 +1,4 @@
-# Git
+# Git & Version Control 
 
 本部分主要介绍Git。英文Git教程参见[Get started with GitHub | Happy Git and GitHub for the useR](https://happygitwithr.com/)
 

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Bookdown | Cool Kids’ Skills</title>
+  <title>Chapter 2 Rmarkdown：使用Rmd撰写论文 | Cool Kids’ Skills</title>
   <meta name="description" content="Skills required for Dr. Hu’s Amazing team members and that cool kids should know." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Bookdown | Cool Kids’ Skills" />
+  <meta property="og:title" content="Chapter 2 Rmarkdown：使用Rmd撰写论文 | Cool Kids’ Skills" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Bookdown | Cool Kids’ Skills" />
+  <meta name="twitter:title" content="Chapter 2 Rmarkdown：使用Rmd撰写论文 | Cool Kids’ Skills" />
   
   <meta name="twitter:description" content="Skills required for Dr. Hu’s Amazing team members and that cool kids should know." />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rmarkdown-rmd-.html"/>
-<link rel="next" href="git-version-control.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="bookdown.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -209,91 +209,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="bookdown" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Bookdown</h1>
-<p>同样的，我们参考<a href="https://bookdown.org/yihui/rmarkdown/books.html">R Markdown: The Definitive Guide</a>Chapter 12学习Bookdown。</p>
-<div id="bookdown包下载" class="section level2">
-<h2><span class="header-section-number">3.1</span> Bookdown包下载</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="bookdown.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&#39;bookdown&#39;</span>)</span>
-<span id="cb1-2"><a href="bookdown.html#cb1-2"></a></span>
-<span id="cb1-3"><a href="bookdown.html#cb1-3"></a><span class="co"># or Github</span></span>
-<span id="cb1-4"><a href="bookdown.html#cb1-4"></a></span>
-<span id="cb1-5"><a href="bookdown.html#cb1-5"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;rstudio/bookdown&#39;</span>)</span></code></pre></div>
+<div id="rmarkdown使用rmd撰写论文" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Rmarkdown：使用Rmd撰写论文</h1>
+<div id="撰写中文论文" class="section level2">
+<h2><span class="header-section-number">2.1</span> 撰写中文论文</h2>
+<p>我们使用胡悦老师编辑的template_cn.docx作为生成论文的模板，下文将逐一介绍各部分内容和注意事项。</p>
+<div id="rmd输出部分设置" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Rmd输出部分设置</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rmarkdown-rmd-.html#cb1-1"></a>title<span class="op">:</span><span class="st"> &quot;牦牛肉干风味差异分析&quot;</span></span>
+<span id="cb1-2"><a href="rmarkdown-rmd-.html#cb1-2"></a>subtitle<span class="op">:</span><span class="st"> &quot;基于西藏自然环境和人文特征的综合讨论&quot;</span></span>
+<span id="cb1-3"><a href="rmarkdown-rmd-.html#cb1-3"></a>author<span class="op">:</span><span class="st">  </span></span>
+<span id="cb1-4"><a href="rmarkdown-rmd-.html#cb1-4"></a><span class="st">  </span><span class="op">-</span><span class="st"> </span>李小狼<span class="op">^</span>[作者信息：李小狼，男，本科生。地址：xxx；联系方式：xxx]</span>
+<span id="cb1-5"><a href="rmarkdown-rmd-.html#cb1-5"></a>  <span class="op">-</span><span class="st"> </span>王小明</span>
+<span id="cb1-6"><a href="rmarkdown-rmd-.html#cb1-6"></a>output<span class="op">:</span><span class="st"> </span></span>
+<span id="cb1-7"><a href="rmarkdown-rmd-.html#cb1-7"></a><span class="st">  </span>bookdown<span class="op">::</span>word_document2<span class="op">:</span></span>
+<span id="cb1-8"><a href="rmarkdown-rmd-.html#cb1-8"></a><span class="st">    </span>reference_docx<span class="op">:</span><span class="st"> </span>template_cn.docx</span>
+<span id="cb1-9"><a href="rmarkdown-rmd-.html#cb1-9"></a>fontsize<span class="op">:</span><span class="st"> </span>12pt</span>
+<span id="cb1-10"><a href="rmarkdown-rmd-.html#cb1-10"></a>bibliography<span class="op">:</span><span class="st"> </span>lixiaolang.bib</span>
+<span id="cb1-11"><a href="rmarkdown-rmd-.html#cb1-11"></a>csl<span class="op">:</span><span class="st"> </span>american<span class="op">-</span>political<span class="op">-</span>science<span class="op">-</span>association.csl</span>
+<span id="cb1-12"><a href="rmarkdown-rmd-.html#cb1-12"></a>link<span class="op">-</span>citations<span class="op">:</span><span class="st"> </span>true</span>
+<span id="cb1-13"><a href="rmarkdown-rmd-.html#cb1-13"></a>abstract<span class="op">:</span><span class="st"> </span><span class="er">|</span></span>
+<span id="cb1-14"><a href="rmarkdown-rmd-.html#cb1-14"></a></span>
+<span id="cb1-15"><a href="rmarkdown-rmd-.html#cb1-15"></a><span class="st">  </span><span class="er">**</span>摘要<span class="op">**</span><span class="er">:</span><span class="st">  </span>略略略</span>
+<span id="cb1-16"><a href="rmarkdown-rmd-.html#cb1-16"></a>  </span>
+<span id="cb1-17"><a href="rmarkdown-rmd-.html#cb1-17"></a>  <span class="op">**</span>关键词<span class="op">**</span>：略略略</span></code></pre></div>
+<p><code>title</code>，<code>subtitle</code>分别为论文主、副标题，注意使用英文<code>""</code>将标题内容括起（以识别为文本）。当标题中包含英文双引号时，外层可用单引号<code>''</code>括起。</p>
+<p><code>author</code>为论文作者。当有多位作者时，在每行前使用<code>-</code>标注，Rmarkdown将统一识别为作者名，并在word中纵向居中排布。<code>^[]</code>为脚注内容。</p>
+<p><code>fontsize</code>为字体大小。</p>
+<p><code>bibliography</code>为参考文献文件，我们使用zotero生成，将在<strong>Zotero与Rmd</strong>部分详细讲解。</p>
+<p><code>csl</code>为参考文献生成标准的格式文件，上述代码使用APSA格式生成参考文献。</p>
+<p><code>link-citations</code>为True时，将生成从文本引用指向参考文献的文本内超链接。</p>
+<p><code>abstract</code>为文章摘要，<code>｜</code>表示以下部分全部为<code>abstract</code>内容。</p>
 </div>
-<div id="bookdown-project结构" class="section level2">
-<h2><span class="header-section-number">3.2</span> Bookdown project结构</h2>
-<p>请在进行Bookdown书写时，首先创建一个新的project。Working directory中一般有以下部分：</p>
-<p><code>index.Rmd</code>: Rmd的第一章节，包括整本书的格式设置和第一章内容</p>
-<p><code>num-name.Rmd</code>:<code>num</code>决定<code>Bookdown</code>输出时的章节顺序，保序；<code>name</code>自己起名</p>
-<p><code>_bookdown.yml</code>:输出格式逻辑调整，一般不用</p>
-<p><code>_output.yml</code>:输出格式内容调整（例如书名），一般只需要更改全书书名</p>
-<p><code>preamble.tex</code>和<code>style.css</code>:Latex和Css调整输出样式</p>
-<p>其他可能还有<code>.bib</code>（引用，见Zotero部分）。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="bookdown.html#cb2-1"></a>directory<span class="op">/</span></span>
-<span id="cb2-2"><a href="bookdown.html#cb2-2"></a>├──  index.Rmd</span>
-<span id="cb2-3"><a href="bookdown.html#cb2-3"></a>├── <span class="dv">01</span><span class="op">-</span>intro.Rmd</span>
-<span id="cb2-4"><a href="bookdown.html#cb2-4"></a>├── <span class="dv">02</span><span class="op">-</span>literature.Rmd</span>
-<span id="cb2-5"><a href="bookdown.html#cb2-5"></a>├── <span class="dv">03</span><span class="op">-</span>method.Rmd</span>
-<span id="cb2-6"><a href="bookdown.html#cb2-6"></a>├── <span class="dv">04</span><span class="op">-</span>application.Rmd</span>
-<span id="cb2-7"><a href="bookdown.html#cb2-7"></a>├── <span class="dv">05</span><span class="op">-</span>summary.Rmd</span>
-<span id="cb2-8"><a href="bookdown.html#cb2-8"></a>├── <span class="dv">06</span><span class="op">-</span>references.Rmd</span>
-<span id="cb2-9"><a href="bookdown.html#cb2-9"></a>├── _bookdown.yml</span>
-<span id="cb2-10"><a href="bookdown.html#cb2-10"></a>├── _output.yml</span>
-<span id="cb2-11"><a href="bookdown.html#cb2-11"></a>├──  book.bib</span>
-<span id="cb2-12"><a href="bookdown.html#cb2-12"></a>├──  preamble.tex</span>
-<span id="cb2-13"><a href="bookdown.html#cb2-13"></a>├──  README.md</span>
-<span id="cb2-14"><a href="bookdown.html#cb2-14"></a>└──  style.css</span></code></pre></div>
+<div id="rmd正文部分设置" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Rmd正文部分设置</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="rmarkdown-rmd-.html#cb2-1"></a><span class="co"># 引言</span></span>
+<span id="cb2-2"><a href="rmarkdown-rmd-.html#cb2-2"></a></span>
+<span id="cb2-3"><a href="rmarkdown-rmd-.html#cb2-3"></a>牦牛肉干是全国人民喜爱的风味食品[<span class="op">@</span>Yang2020; <span class="op">@</span>Jia2020]</span>
+<span id="cb2-4"><a href="rmarkdown-rmd-.html#cb2-4"></a></span>
+<span id="cb2-5"><a href="rmarkdown-rmd-.html#cb2-5"></a><span class="co"># 牦牛肉干制作方法介绍</span></span>
+<span id="cb2-6"><a href="rmarkdown-rmd-.html#cb2-6"></a></span>
+<span id="cb2-7"><a href="rmarkdown-rmd-.html#cb2-7"></a><span class="co">## 风干法</span></span>
+<span id="cb2-8"><a href="rmarkdown-rmd-.html#cb2-8"></a></span>
+<span id="cb2-9"><a href="rmarkdown-rmd-.html#cb2-9"></a><span class="co">### 夏季风干法</span></span></code></pre></div>
+<p>一般正文最多使用三级标题。</p>
+<p><code>[@xxx]</code>为生成引文，其生成格式由Zotero内Bibtex生成的Citekey决定，将在<strong>Zotero与Rmd</strong>部分详细讲解。</p>
+<p>此外，除文字外，Rmd正文内部可以插入代码块、图表等其他内容，可参见<a href="https://bookdown.org/yihui/rmarkdown/r-code.html">R Markdown: The Definitive Guide</a>相关内容。</p>
 </div>
-<div id="index.rmd" class="section level2">
-<h2><span class="header-section-number">3.3</span> <code>Index.Rmd</code></h2>
-<p><code>Index.Rmd</code>是Bookdown中最重要的部分，其包括一个YAML和第一章内容，其中，YAML决定全书格式</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="bookdown.html#cb3-1"></a><span class="op">---</span></span>
-<span id="cb3-2"><a href="bookdown.html#cb3-2"></a>title<span class="op">:</span><span class="st"> &quot;Summer RA Conclusion&quot;</span></span>
-<span id="cb3-3"><a href="bookdown.html#cb3-3"></a>author<span class="op">:</span><span class="st"> &quot;Yuyang Shi, Yokia Xu&quot;</span></span>
-<span id="cb3-4"><a href="bookdown.html#cb3-4"></a>date<span class="op">:</span><span class="st"> &quot;`r Sys.Date()`&quot;</span></span>
-<span id="cb3-5"><a href="bookdown.html#cb3-5"></a>site<span class="op">:</span><span class="st"> </span>bookdown<span class="op">::</span>bookdown_site</span>
-<span id="cb3-6"><a href="bookdown.html#cb3-6"></a>output<span class="op">:</span><span class="st"> </span>bookdown<span class="op">::</span>gitbook</span>
-<span id="cb3-7"><a href="bookdown.html#cb3-7"></a>description<span class="op">:</span><span class="st"> &quot;Summer RA Conclusion&quot;</span></span>
-<span id="cb3-8"><a href="bookdown.html#cb3-8"></a>documentclass<span class="op">:</span><span class="st"> </span>book</span>
-<span id="cb3-9"><a href="bookdown.html#cb3-9"></a>bibliography<span class="op">:</span><span class="st"> </span>law<span class="op">-</span>and<span class="op">-</span>politics.bib,</span>
-<span id="cb3-10"><a href="bookdown.html#cb3-10"></a>biblio<span class="op">-</span>style<span class="op">:</span><span class="st"> </span>apalike</span>
-<span id="cb3-11"><a href="bookdown.html#cb3-11"></a><span class="op">---</span></span></code></pre></div>
-<p>其中，site和output决定全书输出格式，可参见详见<a href="https://bookdown.org/yihui/rmarkdown/bookdown-output.html">R Markdown: The Definitive Guide Chapter 12.4</a>。一般而言，只需要更改<code>title</code>,<code>author</code>,<code>description</code>,<code>bibliography</code>和<code>biblio-style</code>。</p>
+<div id="rmd-setup建议设置" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Rmd setup建议设置</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rmarkdown-rmd-.html#cb3-1"></a>{r setup, include=<span class="ot">FALSE</span>}</span>
+<span id="cb3-2"><a href="rmarkdown-rmd-.html#cb3-2"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">FALSE</span>, <span class="dt">message =</span> <span class="ot">FALSE</span>, <span class="dt">warning =</span> <span class="ot">FALSE</span>, <span class="dt">dpi =</span> <span class="dv">300</span>)</span>
+<span id="cb3-3"><a href="rmarkdown-rmd-.html#cb3-3"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)</span>
+<span id="cb3-4"><a href="rmarkdown-rmd-.html#cb3-4"></a></span>
+<span id="cb3-5"><a href="rmarkdown-rmd-.html#cb3-5"></a></span>
+<span id="cb3-6"><a href="rmarkdown-rmd-.html#cb3-6"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(pacman)) <span class="kw">install.packages</span>(<span class="st">&quot;pacman&quot;</span>)</span>
+<span id="cb3-7"><a href="rmarkdown-rmd-.html#cb3-7"></a><span class="kw">library</span>(pacman)</span>
+<span id="cb3-8"><a href="rmarkdown-rmd-.html#cb3-8"></a></span>
+<span id="cb3-9"><a href="rmarkdown-rmd-.html#cb3-9"></a><span class="kw">p_load</span>(</span>
+<span id="cb3-10"><a href="rmarkdown-rmd-.html#cb3-10"></a>  flextable, <span class="co"># Visualization</span></span>
+<span id="cb3-11"><a href="rmarkdown-rmd-.html#cb3-11"></a>  <span class="co"># Applied</span></span>
+<span id="cb3-12"><a href="rmarkdown-rmd-.html#cb3-12"></a>  <span class="co"># dependency</span></span>
+<span id="cb3-13"><a href="rmarkdown-rmd-.html#cb3-13"></a>  haven,stringr, broom, tidyverse</span>
+<span id="cb3-14"><a href="rmarkdown-rmd-.html#cb3-14"></a>) <span class="co"># data wrangling # data wrangling</span></span>
+<span id="cb3-15"><a href="rmarkdown-rmd-.html#cb3-15"></a></span>
+<span id="cb3-16"><a href="rmarkdown-rmd-.html#cb3-16"></a><span class="co"># Functions preload</span></span>
+<span id="cb3-17"><a href="rmarkdown-rmd-.html#cb3-17"></a><span class="kw">set.seed</span>(<span class="dv">313</span>)</span></code></pre></div>
+<p>其中，<code>knitr::opts_chunk$set</code>对正文部分是否显示源代码、汇报（警告）信息以及图像大小进行了设置（可参见<a href="https://bookdown.org/yihui/rmarkdown/r-code.html">R Markdown: The Definitive Guide</a>相关内容。</p>
+<p><code>pacman</code>包中的<code>p_load</code>先对包作<code>if (!require(tidyverse)) install.packages("tidyverse")</code>,再使用<code>library(tidyverse)</code>，能使代码更简洁。</p>
 </div>
-<div id="num-name.rmd" class="section level2">
-<h2><span class="header-section-number">3.4</span> <code>Num-name.Rmd</code></h2>
-<p>在随后的所有Rmd文件中，我们只需要使用markdown语法格式进行书写即可。(安利一下Typora！)</p>
-<p>所有的<code>Num-name.Rmd</code>都<strong>必须包含一个一级标题</strong>，如<code># Bookdown</code>。</p>
-<p>为组织文章结构，我们可以在每个<code>Num-name.Rmd</code>中使用任意的二级、三级标题。但请不要使用四级及以下的标题</p>
 </div>
-<div id="bookdown.yml" class="section level2">
-<h2><span class="header-section-number">3.5</span> <code>_bookdown.yml</code></h2>
-<p>一般不使用，可以用<code>_bookdown.yml</code>限定输出<code>.Rmd</code>的范围和顺序，如</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="bookdown.html#cb4-1"></a>rmd_files<span class="op">:</span><span class="st"> </span>[<span class="st">&quot;index.Rmd&quot;</span>, <span class="st">&quot;02-git.Rmd&quot;</span>, <span class="st">&quot;01-Rmd.Rmd&quot;</span>]</span></code></pre></div>
-<p>将使Bookdown先输出<code>02-git.Rmd</code>，再生成<code>01-Rmd.Rmd</code>，且不输出其他内容。</p>
-</div>
-<div id="output.yml" class="section level2">
-<h2><span class="header-section-number">3.6</span> <code>_output.yml</code></h2>
-<p>一般不使用，可以调整输出格式。详见<a href="https://bookdown.org/yihui/rmarkdown/bookdown-output.html">R Markdown: The Definitive Guide Chapter 12.4</a></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="bookdown.html#cb5-1"></a>bookdown<span class="op">::</span>gitbook<span class="op">:</span></span>
-<span id="cb5-2"><a href="bookdown.html#cb5-2"></a><span class="st">  </span>lib_dir<span class="op">:</span><span class="st"> </span>assets</span>
-<span id="cb5-3"><a href="bookdown.html#cb5-3"></a>  split_by<span class="op">:</span><span class="st"> </span>section</span>
-<span id="cb5-4"><a href="bookdown.html#cb5-4"></a>  config<span class="op">:</span></span>
-<span id="cb5-5"><a href="bookdown.html#cb5-5"></a><span class="st">    </span>toolbar<span class="op">:</span></span>
-<span id="cb5-6"><a href="bookdown.html#cb5-6"></a><span class="st">      </span>position<span class="op">:</span><span class="st"> </span>static</span>
-<span id="cb5-7"><a href="bookdown.html#cb5-7"></a>bookdown<span class="op">::</span>pdf_book<span class="op">:</span></span>
-<span id="cb5-8"><a href="bookdown.html#cb5-8"></a><span class="st">  </span>keep_tex<span class="op">:</span><span class="st"> </span>yes</span>
-<span id="cb5-9"><a href="bookdown.html#cb5-9"></a>bookdown<span class="op">::</span>html_book<span class="op">:</span></span>
-<span id="cb5-10"><a href="bookdown.html#cb5-10"></a><span class="st">  </span>css<span class="op">:</span><span class="st"> </span>toc.css</span></code></pre></div>
-</div>
-<div id="补充说明" class="section level2">
-<h2><span class="header-section-number">3.7</span> 补充说明</h2>
-<ol style="list-style-type: decimal">
-<li><p>Bookdown中，各章节需要依照“num-name.Rmd”的方式命名。其中num决定章节先后顺序，保序即可。</p></li>
-<li><p>Bookdown中的Zotero引用与第三部分完全一致。</p></li>
-<li><p>即使没有"_bookdown.yml“和”_output.yml"文件，Bookdown依然能按照default格式输出。但在与Github连接不稳定时，将上述文件储存在本地是有用的。</p></li>
-<li><p>在完成Bookdown各章节书写后，需要分别knit才能得到完整文档（仅knit<code>index.Rmd</code>会有各章节目录，但不会有具体内容）。</p></li>
-</ol>
+<div id="撰写英文论文" class="section level2">
+<h2><span class="header-section-number">2.2</span> 撰写英文论文</h2>
+<p>在bookdown输出部分中确定输出格式即可（不需要使用<code>template_cn.docx</code>,bookdown内部自带英文模板），例如：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rmarkdown-rmd-.html#cb4-1"></a>output<span class="op">:</span></span>
+<span id="cb4-2"><a href="rmarkdown-rmd-.html#cb4-2"></a><span class="st">  </span>bookdown<span class="op">::</span>pdf_document2<span class="op">:</span></span>
+<span id="cb4-3"><a href="rmarkdown-rmd-.html#cb4-3"></a><span class="st">    </span>fig_caption<span class="op">:</span><span class="st"> </span>yes</span>
+<span id="cb4-4"><a href="rmarkdown-rmd-.html#cb4-4"></a>    keep_tex<span class="op">:</span><span class="st"> </span>yes</span>
+<span id="cb4-5"><a href="rmarkdown-rmd-.html#cb4-5"></a>    toc<span class="op">:</span><span class="st"> </span><span class="ot">FALSE</span></span>
+<span id="cb4-6"><a href="rmarkdown-rmd-.html#cb4-6"></a>    latex_engine<span class="op">:</span><span class="st"> </span>xelatex</span></code></pre></div>
+<p>可参见<a href="https://bookdown.org/yihui/bookdown/output-formats.html">R Markdown: The Definitive Guide</a>相关内容。</p>
 
 </div>
 </div>
@@ -302,8 +297,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="rmarkdown-rmd-.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-version-control.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bookdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
