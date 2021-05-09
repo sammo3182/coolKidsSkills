@@ -1,29 +1,31 @@
 ---
-title: "Summer RA Conclusion"
-author: "Yuyang Shi, Yokia Xu"
+title: "Cool Kids' Skills"
+author: 
+  - Yuyang Shi
+  - Yokia Xu
+  - Yue Hu
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
-description: "Summer RA Conclusion"
+description: "Skills required for Dr. Hu's Amazing team members and that cool kids should know."
 documentclass: book
 
 ---
 
 # Introduction
 
-本文件为2020年夏季学期胡悦老师RA项目中的方法总结，主要包括：
+2020夏，鲜儿与WM从胡公习社科方便法门于清华，得技若干。
+公曰：“小巧技尔，才俊或习。”
+因汇于下，以渔同好。
+技能如下：
 
-1.  使用.Rmd撰写论文
+1. Rmarkdown；
+1. Bookdown;
+1. Version control;
+1. Bibliography management;
+1. Literature notes
 
-2.  Git
-
-3. Zotero与Rmd
-
-4. bookdown基本使用方法
-
-5. 如何快速阅读论文
-
-**提醒**：由于各种原因，请尽可能保证在使用R时，各种文件路径中仅含有英文字母、`_`和`-`（例如R可能无法读取路径名中带有中文的文件）
+**提醒**：请尽可能保证在使用R时，各种文件路径中仅含有英文字母、`_`和`-`，例如R可能无法读取路径名中带有中文的文件 （莫问何以知之，切切）。
 
 
 
